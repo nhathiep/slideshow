@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>jupyter_slideshow_Gitlab slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>jupyter_slideshow slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
@@ -65,7 +65,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
     <!-- End of mathjax configuration -->
 
 <style type="text/css">
-    pre { line-height: 125%; margin: 0; }
+    pre { line-height: 125%; }
 td.linenos pre { color: #000000; background-color: #f0f0f0; padding-left: 5px; padding-right: 5px; }
 span.linenos { color: #000000; background-color: #f0f0f0; padding-left: 5px; padding-right: 5px; }
 td.linenos pre.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
@@ -14385,17 +14385,17 @@ div.jp-OutputPrompt {
 <div class="slides"><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Publishing-Jupter-SlideShows-on-GitLab/Github">Publishing Jupter SlideShows on GitLab/Github<a class="anchor-link" href="#Publishing-Jupter-SlideShows-on-GitLab/Github">&#182;</a></h1><p><strong>Pre-requisites:</strong></p>
+<h1 id="Publishing-Jupter-SlideShows-on-GitHub/GitLab">Publishing Jupter SlideShows on GitHub/GitLab<a class="anchor-link" href="#Publishing-Jupter-SlideShows-on-GitHub/GitLab">&#182;</a></h1><p><strong>Pre-requisites:</strong></p>
 <ul>
 <li>Have Jupyter notebook installed</li>
-<li>Have a GitLab account (in theory, any Roche employee should have access to one at <a href="https://code.roche.com/">https://code.roche.com/</a>)</li>
+<li>Have a GitHub/GitLab account</li>
 </ul>
 <p><strong>Table of Contents:</strong></p>
 <ul>
 <li>Part 0: Intro/Example (what publishing your slideshow can look like)</li>
 <li>Part 1: Set up your SlideShow with Jupyter Notebook</li>
 <li>Part 2: Create the html slideshow file</li>
-<li>Part 3: Host on/Deploy to Github or GitLab</li>
+<li>Part 3: Publish your slideshow to Github or GitLab</li>
 <li>Part 4: Resources &amp; more details</li>
 </ul>
 
@@ -14408,10 +14408,18 @@ div.jp-OutputPrompt {
 <p>⬇️ click down arrow for more details ➡️ click right arrow to go to part 1</p>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The data is some sample dataset from the seaborn module.<br>
+The dataset is called "tips" and is loaded with "load_dataset".</p>
+<p>⬇️ click down arrow for more details ➡️ <strong>double</strong>-click right arrow to go to part 1</p>
+
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
@@ -14433,7 +14441,7 @@ div.jp-OutputPrompt {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
 
 
 
@@ -14527,10 +14535,19 @@ div.jp-OutputPrompt {
 
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The chart is generated with seaborn (boxplot)<br>
+x-axis is the day of the week<br>
+y-axis is the spend at the restaurant (i.e. the total bill)</p>
+<p>⬇️ click down arrow for more details ➡️ <strong>double</strong>-click right arrow to go to part 1</p>
+
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;day&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;total_bill&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">)</span>
@@ -14566,7 +14583,7 @@ div.jp-OutputPrompt {
 
 </div>
 
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Part-1:-Creating-a-SlideShow-with-Jupyter-Notebook">Part 1: Creating a SlideShow with Jupyter Notebook<a class="anchor-link" href="#Part-1:-Creating-a-SlideShow-with-Jupyter-Notebook">&#182;</a></h3><p>First go to View&gt;Cell Toolbar&gt;SlideShow
@@ -14599,14 +14616,14 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Part-2:-Creating-a-SlideShow-with-Jupyter-Notebook">Part 2: Creating a SlideShow with Jupyter Notebook<a class="anchor-link" href="#Part-2:-Creating-a-SlideShow-with-Jupyter-Notebook">&#182;</a></h3><p>To create a slideshow, you need to execute one of the following in the command prompt:</p>
-<blockquote><p>jupyter nbconvert Jupyter\ <font color='blue'>[notebook_name]</font>.ipynb --to slides --post serve</p>
-</blockquote>
-<p><em>or alternatively</em>:</p>
+<h3 id="Part-2:-Creating-a-SlideShow-with-Jupyter-Notebook">Part 2: Creating a SlideShow with Jupyter Notebook<a class="anchor-link" href="#Part-2:-Creating-a-SlideShow-with-Jupyter-Notebook">&#182;</a></h3><p>To create a slideshow, you need to execute one of the following commands in the Command Line (Windows) or Terminal(MacOS):</p>
 <blockquote><p>jupyter nbconvert <font color='blue'>[notebook_name]</font>.ipynb --to slides --stdout &gt; index.html</p>
 </blockquote>
 <p><em>or alternatively to hide code cell</em>:</p>
 <blockquote><p>jupyter nbconvert <font color='blue'>[notebook_name]</font>.ipynb --no-input --no-prompt --to slides --stdout &gt; index.html</p>
+</blockquote>
+<p><em>or alternatively - not my preferred option as it tends to zoom in on the page</em>:</p>
+<blockquote><p>jupyter nbconvert Jupyter\ <font color='blue'>[notebook_name]</font>.ipynb --to slides --post serve</p>
 </blockquote>
 <p>⬇️ click down arrow for more details ➡️ click right arrow to go to part 3</p>
 
@@ -14615,7 +14632,7 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>In my case:</p>
-<blockquote><p>jupyter nbconvert Jupyter\ jupyter_slideshow_Gitlab.ipynb --to slides --post serve</p>
+<blockquote><p>jupyter nbconvert Jupyter\ <font color='blue'>jupyter_slideshow_Gitlab.ipynb</font> --to slides --stdout &gt; index.html</p>
 </blockquote>
 <p>This will create an HTLM file that contains your slideshow<br>
 Your HTML file will be in the same folder as that of all your ipynb notebooks by default</p>
@@ -14627,35 +14644,36 @@ Your HTML file will be in the same folder as that of all your ipynb notebooks by
 <h3 id="Part-3:-Host-on/Deploy-to-GitHub-or-GitLab">Part 3: Host on/Deploy to GitHub or GitLab<a class="anchor-link" href="#Part-3:-Host-on/Deploy-to-GitHub-or-GitLab">&#182;</a></h3><h4 id="If-you-publish-on-GithHub">If you publish on GithHub<a class="anchor-link" href="#If-you-publish-on-GithHub">&#182;</a></h4><ul>
 <li>Upload the html file in your repo, and make sure it is renamed as index.html</li>
 <li>Upload the jupyter notebook (ipynb file)</li>
-<li>See at <a href="https://[yourusername].github.io/[yourprojectname]/">https://[yourusername].github.io/[yourprojectname]/</a></li>
+<li>See at https://<font color=blue>[yourusername]</font>.github.io/<font color=blue>[your_repo_name]</font>/  </li>
 </ul>
-<h4 id="If-you-publish-on-GitLab">If you publish on GitLab<a class="anchor-link" href="#If-you-publish-on-GitLab">&#182;</a></h4><ul>
-<li>You need to be connected to Pulse Secure (important).<br>
-<em>You can access Gitlab without Pulse Secure but you won't be able to serve the pages if not connected</em></li>
+<h4 id="If-you-publish-on-GitLab">If you publish on GitLab<a class="anchor-link" href="#If-you-publish-on-GitLab">&#182;</a></h4><p>⚠️ When using a corporate GitLab, connect via VPN; or else GitLab might not serve the pages</p>
+<ul>
 <li>New project &gt;Create from template&gt;Pages/plain html</li>
 <li>Go into public folder then swap the index.html with your own html file (rename it as "index.html")</li>
 <li>On the left side, go to Settings&gt;pages</li>
 </ul>
-<p>You can see your pages are either served under: <a href="https://[yourusername].pages.roche.com/[yourprojectname">https://[yourusername].pages.roche.com/[yourprojectname</a>] (Roche account)or <a href="https://[yourusername].gitlab.io/[yourprojectname">https://[yourusername].gitlab.io/[yourprojectname</a>] (Personal account)</p>
+<p>You can see your pages are either served under:</p>
+<ul>
+<li>https://<font color=blue>[yourusername]</font>.gitlab.io/<font color=blue>[your_repo_name]</font> (Personal account) or <br></li>
+<li>https://<font color=blue>[yourusername]</font>.pages.[companyname].com/<font color=blue>[your_repo_name]</font> (Company account)</li>
+</ul>
 <p>⬇️ click down arrow for more details ➡️ click right arrow to go to part 4</p>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="If-you-use-git-(Github-below)---untested">If you use git (Github below) - untested<a class="anchor-link" href="#If-you-use-git-(Github-below)---untested">&#182;</a></h4><p>To publish an html file on Github Pages, we need to push to gh-pages branch.
-Create new git repo locally with gh-pages branch:</p>
-<blockquote><p>git init<br>
-git checkout -b gh-pages<br>
-git add index.html<br>
-git commit</p>
+<h4 id="If-you-use-git-(Github-below)">If you use git (Github below)<a class="anchor-link" href="#If-you-use-git-(Github-below)">&#182;</a></h4><p>The below commands should be executed via your Command Line (Windows) or Terminal(MacOS) and you need to be at the root of your project folder (use change directory "cd" to navigate)</p>
+<p>First, create a new git repository locally with the "gh-pages" branch.</p>
+<blockquote><p>git init                   <font color=grey> : creates a local git repository </font><br>
+git add .                  <font color=grey> : adds all changes to the staging area</font><br>
+git commit                 <font color=grey> : commits all changes in the staging area</font></p>
 </blockquote>
 <p>Go to Github and create a new empty repo, and then push our files to the gh-pages branch.</p>
-<blockquote><p>git remote add origin git@github.com:YOUR_USER_NAME/YOUR_REPO_NAME.git<br>
-git branch -M gh-pages<br>
-git push -u origin gh-pages</p>
+<blockquote><p>git remote add origin git@github.com:<font color=blue>[username]/[yourRepo]</font>.git <br> <font color=grey> : connects to your remote repository and names it "origin"</font><br>
+git push -u origin main <font color=grey> : pushes local repo to your remote repo</font></p>
 </blockquote>
-<p>see at <a href="https://[yourusername].github.io/[yourprojectname]/">https://[yourusername].github.io/[yourprojectname]/</a></p>
+<p>see at https://<font color=blue>[username]</font>.github.io/<font color=blue>[yourRepo]</font>/</p>
 
 </div>
 </div></section></section><section><section>
