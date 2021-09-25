@@ -14641,12 +14641,12 @@ Your HTML file will be in the same folder as that of all your ipynb notebooks by
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Part-3:-Host-on/Deploy-to-GitHub-or-GitLab">Part 3: Host on/Deploy to GitHub or GitLab<a class="anchor-link" href="#Part-3:-Host-on/Deploy-to-GitHub-or-GitLab">&#182;</a></h3><h4 id="If-you-publish-on-GithHub">If you publish on GithHub<a class="anchor-link" href="#If-you-publish-on-GithHub">&#182;</a></h4><ul>
+<h3 id="Part-3:-Host-on/Deploy-to-GitHub-or-GitLab">Part 3: Host on/Deploy to GitHub or GitLab<a class="anchor-link" href="#Part-3:-Host-on/Deploy-to-GitHub-or-GitLab">&#182;</a></h3><h4 id="If-you-manually-publish-on-GithHub">If you manually publish on GithHub<a class="anchor-link" href="#If-you-manually-publish-on-GithHub">&#182;</a></h4><ul>
 <li>Upload the html file in your repo, and make sure it is renamed as index.html</li>
 <li>Upload the jupyter notebook (ipynb file)</li>
 <li>See at https://<font color=blue>[yourusername]</font>.github.io/<font color=blue>[your_repo_name]</font>/  </li>
 </ul>
-<h4 id="If-you-publish-on-GitLab">If you publish on GitLab<a class="anchor-link" href="#If-you-publish-on-GitLab">&#182;</a></h4><p>⚠️ When using a corporate GitLab, connect via VPN; or else GitLab might not serve the pages</p>
+<h4 id="If-you-manually-publish-on-GitLab">If you manually publish on GitLab<a class="anchor-link" href="#If-you-manually-publish-on-GitLab">&#182;</a></h4><p>⚠️ When using a corporate GitLab, connect via VPN; or else GitLab might not serve the pages</p>
 <ul>
 <li>New project &gt;Create from template&gt;Pages/plain html</li>
 <li>Go into public folder then swap the index.html with your own html file (rename it as "index.html")</li>
@@ -14663,11 +14663,12 @@ Your HTML file will be in the same folder as that of all your ipynb notebooks by
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="If-you-use-git-(Github-below)">If you use git (Github below)<a class="anchor-link" href="#If-you-use-git-(Github-below)">&#182;</a></h4><p>The below commands should be executed via your Command Line (Windows) or Terminal(MacOS) and you need to be at the root of your project folder (use change directory "cd" to navigate)</p>
+<h4 id="If-you-use-Git-commands-to-push-your-local-repo-to-Github">If you use Git commands to push your local repo to Github<a class="anchor-link" href="#If-you-use-Git-commands-to-push-your-local-repo-to-Github">&#182;</a></h4><p>The below commands should be executed via your Command Line (Windows) or Terminal(MacOS)<br>
+You need to be at the root of your project folder before executing the commands (use "change directory" [cd] to navigate)</p>
 <p>First, create a new git repository locally with the "gh-pages" branch.</p>
 <blockquote><p>git init                   <font color=grey> : creates a local git repository </font><br>
 git add .                  <font color=grey> : adds all changes to the staging area</font><br>
-git commit                 <font color=grey> : commits all changes in the staging area</font></p>
+git commit -m "Commit xxx"                <font color=grey> : commits all changes in staging</font></p>
 </blockquote>
 <p>Go to Github and create a new empty repo, and then push our files to the gh-pages branch.</p>
 <blockquote><p>git remote add origin git@github.com:<font color=blue>[username]/[yourRepo]</font>.git <br> <font color=grey> : connects to your remote repository and names it "origin"</font><br>
